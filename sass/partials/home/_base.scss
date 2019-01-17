@@ -1,0 +1,61 @@
+.home {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  color: $primary-color;
+  user-select: none;
+  
+  .container {
+    position: relative;
+
+    span {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: transparentize($primary-color, .3);
+      font-size: .8em;
+
+      @include for-tablet-portrait-up {
+        font-size: 1em;
+      }
+    }
+
+    .iam {
+      position: absolute;
+      top: -20px;
+      opacity: 0;
+
+      &--fade-in-left {
+        animation: fade-in-left .8s ease-in-out .2s forwards;
+      }
+    }
+
+    .name {
+      font-size: 4.5em;
+      font-weight: 700;
+      color: $primary-color;
+      margin-bottom: 15px;
+      text-shadow: 10px 20px 40px transparentize(black, .6);
+
+      @include for-tablet-portrait-up {
+        font-size: 9em;
+      }
+    }
+
+    .designation {
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      text-align: right;
+
+      &--fade-in-right {
+        animation: fade-in-right .8s ease-in-out .2s forwards;
+      }
+
+      span {
+        line-height: 1.8;
+      }
+    }
+  }
+}

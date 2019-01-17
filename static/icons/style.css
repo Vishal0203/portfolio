@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'pf';
+  src:  url('fonts/pf.eot?u3n4f7');
+  src:  url('fonts/pf.eot?u3n4f7#iefix') format('embedded-opentype'),
+    url('fonts/pf.ttf?u3n4f7') format('truetype'),
+    url('fonts/pf.woff?u3n4f7') format('woff'),
+    url('fonts/pf.svg?u3n4f7#pf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ic-"], [class*=" ic-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pf' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-github:before {
+  content: "\e901";
+  color: #dcdcdc;
+}
+.ic-linked:before {
+  content: "\e902";
+  color: #dcdcdc;
+}
+.ic-stackoverflow:before {
+  content: "\e903";
+  color: #dcdcdc;
+}
+.ic-menu:before {
+  content: "\e900";
+  color: #dcdcdc;
+}
