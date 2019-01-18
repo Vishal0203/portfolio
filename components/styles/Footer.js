@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import { transparentize } from 'polished'
 import { colors } from './GlobalStyles'
-import { media } from './Mixins';
-
-const PADDING_LG = '2em';
+import { media } from './Mixins'
+import { PADDING_LG } from './Constants'
 
 export const StyledFooter = styled.footer`
   position: fixed;
@@ -58,7 +57,7 @@ export const StyledFooter = styled.footer`
       }
       
       ${media.tabletPortrait`
-        font-size: 1.4em;      
+        font-size: 1.4em;
       `}
     }
   }
@@ -67,7 +66,7 @@ export const StyledFooter = styled.footer`
     display: inline-block;
     right: ${PADDING_LG};
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: transform .2s;
 
     &:hover {
@@ -77,10 +76,18 @@ export const StyledFooter = styled.footer`
     a {
       display: inline-block;
       text-decoration: none;
-      padding-bottom: 2px;
-      font-size: .8em;
+      padding-bottom: 1px;
+      font-size: .7em;
       color: ${transparentize(.3, colors.app.primary)};
       border-bottom: 1px solid ${transparentize(.3, colors.app.primary)};
     }
+    
+    ${media.tabletPortrait`
+      letter-spacing: 2px;
+      
+      a {
+        font-size: .8em;
+      }
+    `}
   }
 `;

@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 import { media } from './Mixins';
 import { colors } from './GlobalStyles';
-
-const HEADER_HEIGHT = '100px';
-const LOGO_SIZE = '50px';
+import { HEADER_HEIGHT, LOGO_SIZE } from './Constants';
 
 export const StyledHeader = styled.nav`
   position: fixed;

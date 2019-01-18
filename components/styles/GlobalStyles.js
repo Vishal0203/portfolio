@@ -27,7 +27,7 @@ html {
   font-size: 10px;
   width: 100%;
   height: 100%;
-  background: ${colors.bg.shark} radial-gradient(circle farthest-side at 25% 5%, ${colors.bg.fadedComet}, ${colors.bg.shark});
+  background: ${colors.bg.shark} radial-gradient(circle farthest-side at 25% 5%, ${colors.bg.fadedComet}, ${colors.bg.shark}) fixed;
   font-family: 'Montserrat', sans-serif;
 }
 

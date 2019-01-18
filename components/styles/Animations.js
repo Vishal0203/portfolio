@@ -1,4 +1,6 @@
-@keyframes fade-in-left {
+import { keyframes } from 'styled-components'
+
+export const fadeInLeft = keyframes`
   from {
     left: -60px;
   }
@@ -6,9 +8,9 @@
     opacity: 1;
     left: 0;
   }
-}
+`;
 
-@keyframes fade-in-right {
+export const fadeInRight = keyframes`
   from {
     right: -60px;
   }
@@ -16,4 +18,4 @@
     opacity: 1;
     right: 0;
   }
-}
+`;

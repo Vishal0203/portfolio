@@ -1,7 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components'
 import { transparentize } from 'polished'
-import { colors } from '../components/styles/GlobalStyles';
-import { media } from '../components/styles/Mixins';
+import { colors } from '../components/styles/GlobalStyles'
+import * as animations from '../components/styles/Animations'
+import { media } from '../components/styles/Mixins'
+
+const animation = props =>
+  css`
+    ${props.animate} .8s ease-in-out .2s forwards
+  `;
 
 const HomePage = styled.div`
   position: absolute;
@@ -19,20 +25,61 @@ const HomePage = styled.div`
 const Span = styled.span`
   display: block;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  color: transparentize($primary-color, .3);
-  font-size: .8em;
+  letter-spacing: 2px;
+  color: ${transparentize(.3, colors.app.primary)};
+  font-size: .7em;
+  line-height: 1.8;
+  
+  ${media.tabletPortrait`
+    letter-spacing: 3px;
+    font-size: .8em;
+  `}
+  
+  ${media.tabletLandscape`
+    font-size: 1em;
+  `}
+`;
+
+const Iam = styled(Span)`
+  position: absolute;
+  top: -20px;
+  opacity: 0;
+  animation: ${props => props.animate ? animation : 'none'}
+`;
+
+const Name = styled(Span)`
+  font-size: 4.5em;
+  font-weight: 700;
+  color: ${colors.app.primary};
+  line-height: normal;
+  text-shadow: 10px 20px 40px ${transparentize(.6, colors.app.secondary)};
+  
+  ${media.tabletPortrait`
+    font-size: 4.5em;
+  `}
+  
+  ${media.tabletLandscape`
+    font-size: 9em;  
+  `}
+`;
+
+const Designation = styled.div`
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  text-align: right;
+  animation: ${animation}
 `;
 
 const Home = () => (
   <HomePage>
     <div className="container">
-      <span className="iam iam--fade-in-left">I'm</span>
-      <span className="name">Vishal</span>
-      <div className="designation designation--fade-in-right">
-        <span>A Web development</span>
-        <span>engineer</span>
-      </div>
+      <Iam animate={animations.fadeInLeft}>I'm</Iam>
+      <Name className="name">Vishal</Name>
+      <Designation animate={animations.fadeInRight}>
+        <Span>A Web development</Span>
+        <Span>engineer</Span>
+      </Designation>
     </div>
   </HomePage>
 );
