@@ -13,7 +13,7 @@ export const colors = {
     woodsmoke: '#111217',
   },
   accent: {
-    tallPoppy: '#C1292E',
+    mandy: '#E04C51',
     danube: '#5688C7',
     silverTree: '#68B684'
   }

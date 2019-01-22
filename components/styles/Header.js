@@ -1,20 +1,23 @@
 import styled from 'styled-components'
 import { media } from './Mixins';
 import { colors } from './GlobalStyles';
-import { HEADER_HEIGHT, LOGO_SIZE } from './Constants';
+import { HEADER_HEIGHT_LG, HEADER_HEIGHT_SM, LOGO_SIZE } from './Constants';
 
 export const StyledHeader = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
-  height: ${HEADER_HEIGHT};
+  height: ${HEADER_HEIGHT_SM};
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1em;
+  background-image: linear-gradient(${colors.bg.shark}, transparent);
   
   ${media.tabletPortrait`
+    height: ${HEADER_HEIGHT_LG};
     padding: 0 2em;
+    background: none;
   `}
 `;
 

@@ -5,7 +5,7 @@ import { colors } from './styles/GlobalStyles';
 const Nav = () => {
   return (
     <StyledNav>
-      <NavItem color={colors.accent.tallPoppy}>
+      <NavItem color={colors.accent.mandy}>
         <Link prefetch href='/about'>
           <a>about</a>
         </Link>

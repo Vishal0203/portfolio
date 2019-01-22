@@ -29,13 +29,10 @@ const Span = styled.span`
   color: ${transparentize(.3, colors.app.primary)};
   font-size: .7em;
   line-height: 1.8;
+  font-weight: 500;
   
   ${media.tabletPortrait`
     letter-spacing: 3px;
-    font-size: .8em;
-  `}
-  
-  ${media.tabletLandscape`
     font-size: 1em;
   `}
 `;
@@ -52,10 +49,10 @@ const Name = styled(Span)`
   font-weight: 700;
   color: ${colors.app.primary};
   line-height: normal;
-  text-shadow: 10px 20px 40px ${transparentize(.6, colors.app.secondary)};
+  text-shadow: 0 8px 16px ${transparentize(.5, colors.app.secondary)};
   
   ${media.tabletPortrait`
-    font-size: 4.5em;
+    font-size: 8em;
   `}
   
   ${media.tabletLandscape`
