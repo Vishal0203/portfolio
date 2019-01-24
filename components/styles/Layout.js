@@ -9,6 +9,6 @@ export const Container = styled.div`
   padding: calc(${HEADER_HEIGHT_SM} + 2em) 3em;
   
   ${media.tabletPortrait`
-    padding: padding: calc(${HEADER_HEIGHT_LG} + 2em) 4em;
+    padding: calc(${HEADER_HEIGHT_LG} + 3em) 4em;
   `}
 `;

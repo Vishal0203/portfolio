@@ -18,6 +18,17 @@ export const PageTitle = styled.h1`
   `}
 `
 
+export const SubHeading = styled(PageTitle)`
+  text-transform: unset;
+  font-size: .9em;
+  margin-top: 2.5em;
+  letter-spacing: 2px;
+  
+  ${media.tabletPortrait`
+    font-size: 1.2em;
+  `}
+`
+
 // content
 export const Content = styled.div`
   color: ${colors.app.primary};
