@@ -108,7 +108,7 @@ export const NavItem = styled.li`
     right: 0;
     bottom: 0;
     height: 2px;
-    background-color: ${props => props.color};
+    background-color: ${props => props.accent};
     transition: transform .2s;
     transform: scale(0);    
   }

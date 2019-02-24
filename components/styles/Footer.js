@@ -27,7 +27,6 @@ export const StyledFooter = styled.footer`
     padding: 0;
     
     li {
-      padding: .5em;
       margin-right: .5em;
       transition: transform .4s;
 
@@ -45,12 +44,14 @@ export const StyledFooter = styled.footer`
     }
     
     a {
+      display: inline-block;
+      padding: .5em;
       text-decoration: none;
       cursor: pointer;
     }
 
     [class^='ic-'] {
-      font-size: 1.2em;
+      font-size: 1em;
 
       &:before {
         color: ${transparentize(.3, colors.app.primary)};
