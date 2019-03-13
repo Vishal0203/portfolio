@@ -11,7 +11,7 @@ const About = () => (
       <p>Hi, I'm Vishal Sharma.</p>
       <p>
         I'm an enthusiastic Full-stack Developer, and professionally a Web Development Engineer for&nbsp;
-        <a target="_blank" href="https://nowfloats.com">NowFloats Technologies</a> in Hyderabad, India, and a huge fan
+        <a target="_blank" href="https://www.linkedin.com/company/amazon/">Amazon</a> in Hyderabad, India, and a huge fan
         of Single Page Applications (SPAs), React JS and frameworks built around it. I work on every project
         that I find challenging, exciting and provides a gateway to learn and implement new things.
       </p>

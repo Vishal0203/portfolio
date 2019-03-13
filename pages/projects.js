@@ -1,20 +1,20 @@
-import styled from 'styled-components'
 import { Container } from '../components/styles/Layout'
 import { colors } from '../components/styles/GlobalStyles'
-import { PageTitle } from '../components/styles/GeneralStyles'
-import { Content } from '../components/styles/GeneralStyles'
-
-const CenteredContent = styled(Content)`
-  text-align: center;
-`
+import { PageTitle, Content } from '../components/styles/GeneralStyles'
+import { StyledProjectList } from '../components/styles/StyledProjectList'
 
 const Projects = () => (
   <Container>
     <PageTitle textColor={colors.app.primary}>
       Projects
     </PageTitle>
-    <CenteredContent>
-    </CenteredContent>
+    <Content accent={colors.accent.danube}>
+      <p>
+        I've worked on many types of projects both personal and professional. Here are some of
+        the projects that I've worked on.
+      </p>
+      <StyledProjectList />
+    </Content>
   </Container>
 );
 

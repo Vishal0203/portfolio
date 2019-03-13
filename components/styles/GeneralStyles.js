@@ -1,7 +1,10 @@
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { transparentize } from 'polished'
 import { colors } from './GlobalStyles'
 import { media } from './Mixins'
+import {} from './StyledProjectList'
+import { StyledProjectList } from './StyledProjectList'
 
 // headings
 export const PageTitle = styled.h1`
@@ -44,10 +47,18 @@ export const Content = styled.div`
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: .2px;
-    
-    a {
-      color: ${props => props.accent};
-      text-decoration: none;
-    }
+  }
+  
+  a {
+    color: ${props => props.accent};
+    text-decoration: none;
+  }
+  
+  ${StyledProjectList} {
+    margin: 2.5em 0;
   }
 `
+
+Content.propTypes = {
+  accent: PropTypes.string.isRequired
+}
