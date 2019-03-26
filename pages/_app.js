@@ -1,6 +1,6 @@
 import React from 'react'
 import App, { Container } from 'next/app'
-import Page from '../components/Page';
+import AppProvider from '../components/AppProvider';
 
 class PortfolioApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -17,9 +17,9 @@ class PortfolioApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Container>
-        <Page>
+        <AppProvider>
           <Component {...pageProps} />
-        </Page>
+        </AppProvider>
       </Container>
     )
   }

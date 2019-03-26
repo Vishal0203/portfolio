@@ -12,6 +12,7 @@ export const StyledFooter = styled.footer`
   width: 100%;
   bottom: 0;
   padding: .2em 1em;
+  z-index: 2;
   background-color: ${colors.bg.woodsmoke};
   
   ${media.tabletLandscape`

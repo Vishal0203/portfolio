@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'pf';
-  src:  url('fonts/pf.eot?u3n4f7');
-  src:  url('fonts/pf.eot?u3n4f7#iefix') format('embedded-opentype'),
-    url('fonts/pf.ttf?u3n4f7') format('truetype'),
-    url('fonts/pf.woff?u3n4f7') format('woff'),
-    url('fonts/pf.svg?u3n4f7#pf') format('svg');
+  src:  url('fonts/pf.eot?x8lisg');
+  src:  url('fonts/pf.eot?x8lisg#iefix') format('embedded-opentype'),
+    url('fonts/pf.ttf?x8lisg') format('truetype'),
+    url('fonts/pf.woff?x8lisg') format('woff'),
+    url('fonts/pf.svg?x8lisg#pf') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-cross:before {
+  content: "\e904";
+  color: #dcdcdc;
+}
 .ic-github:before {
   content: "\e901";
   color: #dcdcdc;

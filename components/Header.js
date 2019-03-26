@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import Nav from './Nav';
+import Link from 'next/link'
+import Nav from './Nav'
 
-import { StyledHeader, Brand } from './styles/Header';
+import { StyledHeader, Brand } from './styles/Header'
 import { colors } from './styles/GlobalStyles'
 
 const Header = () => (
@@ -14,6 +14,6 @@ const Header = () => (
     </Link>
     <Nav />
   </StyledHeader>
-);
+)
 
-export default Header;
+export default Header
