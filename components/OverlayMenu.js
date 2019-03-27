@@ -1,7 +1,7 @@
 import { NavItems } from './Nav'
 import { AppContext } from './AppProvider'
 
-const OverlayMenu = (props) => {
+const OverlayMenu = props => {
   return (
     <AppContext.Consumer>
       {(context) => {
@@ -9,7 +9,7 @@ const OverlayMenu = (props) => {
 
         return (
           <ul className={className}>
-            <NavItems />
+            <NavItems {...context} />
           </ul>
         )
       }}

@@ -2,47 +2,36 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import { StyledNav, NavItem } from './styles/Header'
 import { colors } from './styles/GlobalStyles'
-import { AppContext } from './AppProvider'
 
-export const NavItems = () => {
+export const NavItems = props => {
   return (
-    <AppContext.Consumer>
-      {(context) => (
-        <Fragment>
-          <NavItem onClick={context.toggleMenu} accent={colors.accent.mandy}>
-            <Link prefetch href='/about'>
-              <a>about</a>
-            </Link>
-          </NavItem>
-          <NavItem onClick={context.toggleMenu} accent={colors.accent.danube}>
-            <Link prefetch href='/projects'>
-              <a>projects</a>
-            </Link>
-          </NavItem>
-          <NavItem onClick={context.toggleMenu} accent={colors.accent.silverTree}>
-            <Link prefetch href='/contact'>
-              <a>contact</a>
-            </Link>
-          </NavItem>
-        </Fragment>
-      )}
-    </AppContext.Consumer>
+    <Fragment>
+      <NavItem onClick={props.toggleMenu} accent={colors.accent.mandy}>
+        <Link prefetch href='/about'>
+          <a>about</a>
+        </Link>
+      </NavItem>
+      <NavItem onClick={props.toggleMenu} accent={colors.accent.danube}>
+        <Link prefetch href='/projects'>
+          <a>projects</a>
+        </Link>
+      </NavItem>
+      <NavItem onClick={props.toggleMenu} accent={colors.accent.silverTree}>
+        <Link prefetch href='/contact'>
+          <a>contact</a>
+        </Link>
+      </NavItem>
+    </Fragment>
   )
 }
 
-const Nav = () => {
+const Nav = props => {
+  const className = `nav--collapsed ${props.state.showMenu ? 'ic-cross' : 'ic-menu'}`
+
   return (
     <StyledNav>
       <NavItems />
-      <AppContext.Consumer>
-        {(context) => {
-          let className = `nav--collapsed ${context.state.showMenu ? 'ic-cross' : 'ic-menu'}`
-
-          return (
-            <span onClick={context.toggleMenu} className={className} />
-          )
-        }}
-      </AppContext.Consumer>
+      <span onClick={props.toggleMenu} className={className} />
     </StyledNav>
   )
 }
