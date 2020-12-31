@@ -74,7 +74,7 @@ const Home = () => (
       <Iam animate={animations.fadeInLeft}>I'm</Iam>
       <Name className="name">Vishal</Name>
       <Designation animate={animations.fadeInRight}>
-        <Span>A Web development</Span>
+        <Span>A Front-end development</Span>
         <Span>engineer</Span>
       </Designation>
     </div>
